@@ -1,0 +1,105 @@
+
+.about {
+    margin-left: 110px;
+    width: 1200px;
+    border: px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px; 
+  }
+  
+hr {
+    border: 0; 
+    height: 4px; 
+    background-color: #55d0e6; 
+    margin: 20px 0; 
+    position: relative; 
+  }
+  
+  
+  .heading-wrapper {
+    display: inline-block;
+    position: relative;
+  }
+  
+  
+  
+  .image {
+    flex: 0 0 auto; /* This ensures the image doesn't grow or shrink */
+    margin-right: 20px; /* Add some space between image and content */
+  }
+  
+  .image img {
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    display: block; /* Remove default image spacing */
+  }
+  
+  .content {
+    flex: 1; /* Allow content to grow and take remaining space */
+  }
+  
+  .content h2 {
+    font-family: "Roboto", sans-serif;
+    color: rgb(214, 46, 46);
+  }
+  
+  .content p {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    color: rgb(0, 0, 0);
+  }
+  
+  .content h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+ 
+
+  ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  ul li {
+    margin-bottom: 10px; /* Add margin between list items */
+    position: relative; /* Position relative for custom bullet */
+    padding-left: 20px; /* Add padding to the left of list items */
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #55d0e6; /* Color of the circle */
+  }
+  
+/* Media query for screens smaller than 768px (typical tablets and phones) */
+@media (max-width: 480px) {
+    .about {
+      width: 90%;
+      margin: 0 auto;
+      padding: 10px;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .image {
+      margin-bottom: 20px;
+    }
+  
+    .content {
+      order: -1;
+    }
+  }
